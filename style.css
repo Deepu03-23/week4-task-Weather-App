@@ -1,0 +1,65 @@
+body {
+  font-family: Arial;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+body.dark {
+  background: linear-gradient(to right,#0f2027,#203a43,#2c5364);
+}
+.weather-dashboard {
+  width: 500px;
+  background: rgba(0,0,0,0.3);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.hidden { display: none; }
+
+.error { color: #ffcccc; }
+
+button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.autocomplete {
+  background: white;
+  color: black;
+  position: absolute;
+  width: 250px;
+  border-radius: 6px;
+  z-index: 100;
+}
+
+.autocomplete-item {
+  padding: 6px;
+  cursor: pointer;
+}
+
+.autocomplete-item:hover {
+  background: #eee;
+}
+.weather-dashboard {
+  transition: all 0.5s ease;
+}
+
+.current-weather, .forecast {
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#forecastList p {
+  font-family: monospace;
+  font-size: 16px;
+  margin: 6px 0;
+  display: flex;
+  justify-content: space-between;
+}

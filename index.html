@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/weather-icons.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<div class="weather-dashboard">
+
+  <h1>🌤️ WEATHER DASHBOARD</h1>
+  <hr>
+
+  <div id="loading" class="hidden">Loading weather data...</div>
+  <div id="error" class="hidden error"></div>
+
+  <div class="location">
+    📍 Current Location: <span id="locationName">--</span><br>
+    🕐 Last Updated: <span id="lastUpdated">--</span>
+  </div>
+
+  <div class="current-weather">
+    <h3>Current Weather:</h3>
+    <p>🌡️ Temperature: <span id="temp">--</span></p>
+    <p>☁️ Conditions: <span id="condition">--</span></p>
+    <p>💧 Humidity: <span id="humidity">--</span></p>
+    <p>💨 Wind: <span id="wind">--</span></p>
+    <p>📊 Pressure: <span id="pressure">--</span></p>
+  </div>
+
+  <div class="forecast">
+    <h3>5-Day Forecast:</h3>
+    <div id="forecastList"></div>
+  </div>
+
+  <div class="search-section">
+    <input type="text" id="cityInput" placeholder="Search city...">
+    <div id="autocompleteList" class="autocomplete"></div>
+    <button id="searchBtn">🔍</button>
+
+    <br><br>
+    Units:
+    <button id="metricBtn">°C 🌡️</button> |
+    <button id="imperialBtn">°F</button>
+
+    <br><br>
+    <button id="locationBtn">📍 Use my location</button>
+    <button id="saveFavorite">⭐ Save Favorite</button>
+  </div>
+
+  <div class="favorites">
+    <h3>⭐ Favorite Cities</h3>
+    <ul id="favoritesList"></ul>
+  </div>
+<button id="shareBtn">📤 Share</button>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/weatherService.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<div id="map" style="height:300px; margin-top:20px;"></div>
+
+</body>
+</html>

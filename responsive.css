@@ -1,0 +1,5 @@
+@media (max-width: 600px) {
+  .weather-dashboard {
+    width: 95%;
+  }
+}
